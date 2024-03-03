@@ -63,12 +63,12 @@ def get_one_page_info(a_soups):
             if job_type.text == '代表電話番号':
                 next_div = job_type.find_next_sibling('div')
                 # tanto_name
-                invite_info.tanto_name = next_div.text
+                invite_info.tanto_phone = next_div.text
 
             if job_type.text == '代表者名':
                 next_div = job_type.find_next_sibling('div')
                 # tanto_phone
-                invite_info.tanto_phone = next_div.text
+                invite_info.tanto_name = next_div.text
 
         page_info_list.append(invite_info)
 
